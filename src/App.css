@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.App {
+  text-align: center;
+  padding: 2rem;
+  transition: background-color 0.3s ease;
+}
+
+.App.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.logo {
+  max-width: 45%;
+  height: auto;
+}
+
+.logo.invert {
+  filter: invert(100%);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #007bff;
+  margin-top: 1rem;
+}
+
+.sun {
+  max-width: 3%;
+}
+
+.moon {
+  max-width: 3%;
+}
+
+@keyframes flipRotate3D {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg) translateZ(0);
+  }
+  50% {
+    transform: rotateY(180deg) rotateX(180deg) rotateZ(180deg) translateZ(800px);
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(360deg) rotateZ(360deg) translateZ(0);
+  }
+}
+.flip-rotate-3d {
+  animation: flipRotate3D 2s ease-in-out, flipHorizontal 2s ease-in-out;
+  transform-origin: center;
+  transform-style: preserve-3d;
+}
